@@ -5,7 +5,7 @@ import { UpdateBebidaDto } from './dto/update-bebida.dto';
 
 @Controller('bebidas')
 export class BebidasController {
-  constructor(private readonly bebidasService: BebidasService) {}
+  constructor(private readonly bebidasService: BebidasService) { }
 
   @Post()
   create(@Body() createBebidaDto: CreateBebidaDto) {
@@ -19,16 +19,16 @@ export class BebidasController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.bebidasService.findOne(+id);
+    return this.bebidasService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateBebidaDto: UpdateBebidaDto) {
-    return this.bebidasService.update(+id, updateBebidaDto);
+    return this.bebidasService.update(id, updateBebidaDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.bebidasService.remove(+id);
+    return this.bebidasService.remove(id);
   }
 }

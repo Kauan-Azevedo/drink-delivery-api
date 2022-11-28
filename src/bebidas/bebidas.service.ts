@@ -1,26 +1,48 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
 import { CreateBebidaDto } from './dto/create-bebida.dto';
 import { UpdateBebidaDto } from './dto/update-bebida.dto';
+import { Bebida, bebidaDocument } from './entities/bebida.entity';
 
 @Injectable()
 export class BebidasService {
+  constructor(
+    @InjectModel(Bebida.name) private readonly bebidaModel: Model<bebidaDocument>
+  ) { }
+
   create(createBebidaDto: CreateBebidaDto) {
-    return 'This action adds a new bebida';
+    const bebida = new this.bebidaModel(createBebidaDto);
+    return bebida.save();
   }
 
   findAll() {
-    return `This action returns all bebidas`;
+    return this.bebidaModel.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} bebida`;
+  findOne(id: string) {
+    return this.bebidaModel.findById(id);
   }
 
-  update(id: number, updateBebidaDto: UpdateBebidaDto) {
-    return `This action updates a #${id} bebida`;
+  update(id: string, updateBebidaDto: UpdateBebidaDto) {
+    return this.bebidaModel.findByIdAndUpdate(
+      {
+        _id: id,
+      },
+      {
+        $set: updateBebidaDto
+      },
+      {
+        new: true,
+      }
+    )
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} bebida`;
+  remove(id: string) {
+    return this.bebidaModel.deleteOne(
+      {
+        _id: id,
+      }
+    )
   }
 }
