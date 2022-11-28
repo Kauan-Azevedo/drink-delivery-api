@@ -1,0 +1,200 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2022-11-28T20:18:49.826Z",
+    "__export_source": "insomnia.desktop.app:v2022.6.0",
+    "resources": [
+        {
+            "_id": "req_c0b157340c174ba9a44f5e32d058efc2",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666683383,
+            "created": 1669666518193,
+            "url": "{{ _.baseURL }}bebidas",
+            "name": "Create",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"nome\": \"produto\",\n\t\"valor\": 21.6,\n\t\"quantidade\": 2\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1669666518193,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_856759b90ef644ecac08828a099944b4",
+            "parentId": null,
+            "modified": 1669666483867,
+            "created": 1669666483867,
+            "name": "Drink-delivery",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_025583b8deb644e7b78d570712f2ae73",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666623939,
+            "created": 1669666489481,
+            "url": "{{ _.baseURL }}bebidas",
+            "name": "Get all",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1669666489481,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_9cf0018a8799455e92ce8bfe7d0e6d0c",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666705110,
+            "created": 1669666488602,
+            "url": "{{ _.baseURL }}bebidas/6385177b03ede1b19a358472",
+            "name": "Get one",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1669666488602,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_26cb5b61a5444f1a9388bb2d47d36af0",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666679277,
+            "created": 1669666487426,
+            "url": "{{ _.baseURL }}bebidas/6385176b03ede1b19a35846d",
+            "name": "Delete",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1669666487426,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b77e80a0d0f249888fe2de3bef4dcba3",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666697773,
+            "created": 1669666486050,
+            "url": "{{ _.baseURL }}bebidas/6385177b03ede1b19a358472",
+            "name": "Update",
+            "description": "",
+            "method": "PATCH",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"nome\": \"dolly\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1669666486050,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_76196190eaad6e451228e0c5fb0111a8de1a8a0f",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666559031,
+            "created": 1669666483879,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": {},
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1669666483879,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_76196190eaad6e451228e0c5fb0111a8de1a8a0f",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666483881,
+            "created": 1669666483881,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_8a01c3105ab2449da378cdd3ae0c3370",
+            "parentId": "wrk_856759b90ef644ecac08828a099944b4",
+            "modified": 1669666483875,
+            "created": 1669666483875,
+            "fileName": "Drink-delivery",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        },
+        {
+            "_id": "env_140223afeb774f089040c626b4788a81",
+            "parentId": "env_76196190eaad6e451228e0c5fb0111a8de1a8a0f",
+            "modified": 1669666587658,
+            "created": 1669666560866,
+            "name": "Dev",
+            "data": {
+                "baseURL": "localhost:3000/"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseURL"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1669666560866,
+            "_type": "environment"
+        }
+    ]
+}
